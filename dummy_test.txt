@@ -200,3 +200,40 @@ dummy_test.txt  images  index.html  README.md  styles.css
 (base) nayan@nayan-Vostro-3888:~/hello-world$ cat dummy_test.txt 
 wefef
 (base) nayan@nayan-Vostro-3888:~/hello-world$ 
+----------------------------
+
+screen 2
+
+(base) nayan@nayan-Vostro-3888:~$  ssh-keygen -t ed25519 -C "nayanjha16@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/nayan/.ssh/id_ed25519): ^C 
+(base) nayan@nayan-Vostro-3888:~$ ssh-keygen -t ed25519 -C "nayanjha16@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/nayan/.ssh/id_ed25519): ssh-keygen -t ed25519 -C "nayanjha16@gmail.com"
+Enter passphrase (empty for no passphrase): 
+
+(base) nayan@nayan-Vostro-3888:~$ ssh-keygen -t ed25519 -C "nayanjha16@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/nayan/.ssh/id_ed25519): /home/nayan/.ssh/id_ed25519
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/nayan/.ssh/id_ed25519
+Your public key has been saved in /home/nayan/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:1zmRNw+1o5fRgp1/wogWa40nwM3YI0vy4y56ru7uJ6w nayanjha16@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|                .|
+|       . =   + oo|
+|      . * * + B+.|
+|       + + O *.*+|
+|        S O B.oo+|
+|       . = o ....|
+|   .    .        |
+|    o +.         |
+|  E*BB...        |
++----[SHA256]-----+
+(base) nayan@nayan-Vostro-3888:~$ 
+
+
+
