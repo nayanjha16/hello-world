@@ -1,1 +1,202 @@
 wefef
+(base) nayan@nayan-Vostro-3888:~$ cd /home/nayan/.ssh/
+(base) nayan@nayan-Vostro-3888:~/.ssh$ ls
+id_ed25519  id_ed25519.pub  known_hosts  known_hosts.old
+(base) nayan@nayan-Vostro-3888:~/.ssh$ cat id_ed25519
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABDbtbqlPl
+Dtn2MamQCqYP0LAAAAEAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIGN1Zx+xbc6yKSdi
+3vRwhkmSfcj4qZ/0y95ieCWh+MvdAAAAoCuRFBcDXy371BbeJ7iCDorSM3jwZNHPC94DrY
+/8KJxeKn1hkp6npSxyRCoDgF5jL0CdMeaEJspdRxUyv9VnP1PI4SxLpuPCTrEMQzTX1ksa
+OqnJkcHBi/aNDsiogEeSD7LtzcbaGA1DuM6eU0zVdAvhbM2NCV+iLUG2Sez+ETuJCuCrdE
+VJeLfqO9/5zCIf8bSLeHfctCgGRggLXnT94B0=
+-----END OPENSSH PRIVATE KEY-----
+(base) nayan@nayan-Vostro-3888:~/.ssh$ cat id_ed25519.pub 
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGN1Zx+xbc6yKSdi3vRwhkmSfcj4qZ/0y95ieCWh+Mvd nayanjha16@gmail.com
+(base) nayan@nayan-Vostro-3888:~/.ssh$ cd ~
+(base) nayan@nayan-Vostro-3888:~$ git config --global u
+uploadarchive.  uploadpack.     url.            user.
+(base) nayan@nayan-Vostro-3888:~$ git config --global u
+uploadarchive.  uploadpack.     url.            user.
+(base) nayan@nayan-Vostro-3888:~$ git config --global user.
+user.email           user.signingKey      
+user.name            user.useConfigOnly   
+(base) nayan@nayan-Vostro-3888:~$ git config --global user.name "nayanjha16"
+(base) nayan@nayan-Vostro-3888:~$ git clone git@github.com:nayanjha16/hello-world.git
+Cloning into 'hello-world'...
+The authenticity of host 'github.com (13.234.176.102)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,13.234.176.102' (ECDSA) to the list of known hosts.
+sign_and_send_pubkey: signing failed for ED25519 "/home/nayan/.ssh/id_ed25519" from agent: agent refused operation
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+(base) nayan@nayan-Vostro-3888:~$ git clone https://github.com/nayanjha16/hello-world.git
+Cloning into 'hello-world'...
+remote: Enumerating objects: 7, done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 7
+Unpacking objects: 100% (7/7), 255.99 KiB | 330.00 KiB/s, done.
+(base) nayan@nayan-Vostro-3888:~$ cd hello-world/
+(base) nayan@nayan-Vostro-3888:~/hello-world$ ls
+images  index.html  README.md  styles.css
+(base) nayan@nayan-Vostro-3888:~/hello-world$ touch dummy_test.txt
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	dummy_test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git branch
+* master
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git checkout -b branch1
+Switched to a new branch 'branch1'
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git branch
+* branch1
+  master
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git branch 
+  branch1
+* master
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git checkout branch1 
+Switched to branch 'branch1'
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git branch 
+* branch1
+  master
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git add dummy_test.txt 
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git status
+On branch branch1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   dummy_test.txt
+
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git push 
+fatal: The current branch branch1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin branch1
+
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git push --set-upstream origin branch1
+Username for 'https://github.com': nayanjha16
+Password for 'https://nayanjha16@github.com': 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/nayanjha16/hello-world.git/'
+(base) nayan@nayan-Vostro-3888:~/hello-world$ cd ~
+(base) nayan@nayan-Vostro-3888:~$ git config --global user.email "nayanjha16@gmail.com"
+(base) nayan@nayan-Vostro-3888:~$ git config -l
+user.email=nayanjha16@gmail.com
+user.name=nayanjha16
+(base) nayan@nayan-Vostro-3888:~$ cd hello-world/
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git config --global credential.helper cache
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git push
+fatal: The current branch branch1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin branch1
+
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git push --set-upstream origin branch1
+Username for 'https://github.com': nayanjha16
+Password for 'https://nayanjha16@github.com': 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/nayanjha16/hello-world.git/'
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git push --set-upstream origin branch1
+Username for 'https://github.com': ^C
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git push --set-upstream origin branch1
+Username for 'https://github.com': nayanjha16
+Password for 'https://nayanjha16@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'branch1' on GitHub by visiting:
+remote:      https://github.com/nayanjha16/hello-world/pull/new/branch1
+remote: 
+To https://github.com/nayanjha16/hello-world.git
+ * [new branch]      branch1 -> branch1
+Branch 'branch1' set up to track remote branch 'branch1' from 'origin'.
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git status
+On branch branch1
+Your branch is up to date with 'origin/branch1'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   dummy_test.txt
+
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git commit -m
+error: switch `m' requires a value
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git commit -m "A test commit"
+[branch1 87de07c] A test commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 dummy_test.txt
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git status
+On branch branch1
+Your branch is ahead of 'origin/branch1' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 381 bytes | 381.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/nayanjha16/hello-world.git
+   536053f..87de07c  branch1 -> branch1
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git fetch
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 620 bytes | 620.00 KiB/s, done.
+From https://github.com/nayanjha16/hello-world
+   536053f..f1860b4  master     -> origin/master
+(base) nayan@nayan-Vostro-3888:~/hello-world$ ls
+dummy_test.txt  images  index.html  README.md  styles.css
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git fetch
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 672 bytes | 672.00 KiB/s, done.
+From https://github.com/nayanjha16/hello-world
+   f1860b4..52648be  master     -> origin/master
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git branch
+* branch1
+  master
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git checkout master
+Switched to branch 'master'
+Your branch is behind 'origin/master' by 3 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git fetch
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git fetch -all
+error: did you mean `--all` (with two dashes)?
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git fetch --all
+Fetching origin
+(base) nayan@nayan-Vostro-3888:~/hello-world$ ls
+images  index.html  README.md  styles.css
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git fetch
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git checkout origin/master -- ./dummy_test.txt
+(base) nayan@nayan-Vostro-3888:~/hello-world$ ls
+dummy_test.txt  images  index.html  README.md  styles.css
+(base) nayan@nayan-Vostro-3888:~/hello-world$ cat dummy_test.txt 
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 646 bytes | 646.00 KiB/s, done.
+From https://github.com/nayanjha16/hello-world
+   52648be..9e1d488  master     -> origin/master
+(base) nayan@nayan-Vostro-3888:~/hello-world$ git checkout origin/master -- ./dummy_test.txt
+(base) nayan@nayan-Vostro-3888:~/hello-world$ ls
+dummy_test.txt  images  index.html  README.md  styles.css
+(base) nayan@nayan-Vostro-3888:~/hello-world$ cat dummy_test.txt 
+wefef
+(base) nayan@nayan-Vostro-3888:~/hello-world$ 
