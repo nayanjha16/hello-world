@@ -237,3 +237,5 @@ The key's randomart image is:
 
 
 
+---------------------------------
+Configuring user and password with Git Bash:https://stackoverflow.com/questions/8840551/configuring-user-and-password-with-git-bash
